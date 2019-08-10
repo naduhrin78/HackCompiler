@@ -1,0 +1,9 @@
+// pop pointer 0
+
+@SP
+AM=M-1
+D=M
+
+@THIS
+M=D
+

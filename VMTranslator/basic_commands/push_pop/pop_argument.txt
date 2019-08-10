@@ -1,0 +1,19 @@
+// pop argument {0}
+
+@ARG
+D=M
+
+@{0}
+D=D+A
+
+@13
+M=D
+
+@SP
+AM=M-1
+D=M
+
+@13
+A=M
+M=D
+

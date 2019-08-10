@@ -1,0 +1,9 @@
+// pop static {0}
+
+@SP
+AM=M-1
+D=M
+
+@{1}.{0}
+M=D
+
