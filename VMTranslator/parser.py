@@ -27,7 +27,7 @@ class Parser:
                 file_paths.insert(0, file_paths[sys_index])
                 file_paths.pop(sys_index+1)
 
-            except ValueError as vs:
+            except ValueError:
                 print('No Entry File: Sys.vm not found.')
                 exit(1)
 
@@ -98,4 +98,3 @@ class Parser:
 
     def close(self):
         self.fp.close()
-        

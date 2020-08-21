@@ -1,8 +1,7 @@
 import sys
 import os
-from collections import defaultdict
-from parser import Parser
-from codewriter import CodeWriter
+from VMTranslator.parser import Parser
+from VMTranslator.codewriter import CodeWriter
 
 
 if __name__ == "__main__":
@@ -22,7 +21,7 @@ if __name__ == "__main__":
         print('Given file/directory does not exist.')
         exit(1)
 
-    if os.path.isdir(ip_file_name):
+    if os.path.isdir(ip_file_path):
         ip_file_names = list(filter(lambda x: x[-3:] == '.vm', os.listdir(ip_file_path)))
 
         ip_file_paths = [os.path.join(ip_file_path, file) for file in ip_file_names]
@@ -81,4 +80,3 @@ if __name__ == "__main__":
 
     parser.close()
     writer.close()
-

@@ -88,8 +88,8 @@ class CodeWriter:
         self.fp.write(self.translated_code)
 
     def write_call(self, name, arg_cnt):
-    	self.call_count[name] += 1
-    	
+        self.call_count[name] += 1
+
         self.translated_code = self.code_template['call'].format(name, arg_cnt, self.call_count[name])
 
         self.fp.write(self.translated_code)
@@ -100,4 +100,3 @@ class CodeWriter:
         self.fp.write(self.translated_code)
 
         self.fp.close()
-        
